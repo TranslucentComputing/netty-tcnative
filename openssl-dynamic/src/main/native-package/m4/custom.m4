@@ -18,16 +18,12 @@ AC_DEFUN([CUSTOM_M4_SETUP],
 [
   dnl These macros were copied from tomcat-native/jni/native/build/
   sinclude(m4/apr_common.m4)
-  sinclude(m4/find_apr.m4)
 
   dnl This macro was copied from tomcat-native/jni/native/build with slight modifications
   dnl - Fix autoconf warnings
-  dnl - Make TCN_FIND_APR try the system's APR installation
   sinclude(m4/tcnative.m4)
 
   dnl Make sure Apache Portable Runtime is available in the system.
-  APR_PARSE_ARGUMENTS
-  TCN_FIND_APR
 
   dnl Enable OpenSSL OCSP verification support.
   AC_ARG_ENABLE(ocsp,
