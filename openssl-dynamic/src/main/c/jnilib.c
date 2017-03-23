@@ -142,24 +142,6 @@ TCN_IMPLEMENT_CALL(jboolean, Library, initialize0)(TCN_STDARGS)
     return JNI_TRUE;
 }
 
-TCN_IMPLEMENT_CALL(jint, Library, aprMajorVersion)(TCN_STDARGS)
-{
-    UNREFERENCED_STDARGS;
-    return 1;
-}
-
-TCN_IMPLEMENT_CALL(jstring, Library, aprVersionString)(TCN_STDARGS)
-{
-    UNREFERENCED(o);
-    return AJP_TO_JSTRING("1.5.2");
-}
-
-TCN_IMPLEMENT_CALL(jboolean, Library, aprHasThreads)(TCN_STDARGS)
-{
-    UNREFERENCED_STDARGS;
-    return JNI_TRUE;
-}
-
 jclass tcn_get_string_class()
 {
     return jString_class;
